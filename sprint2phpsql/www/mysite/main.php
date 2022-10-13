@@ -28,8 +28,7 @@
 				echo '<td>';
 				echo $row['nombre'];
 				echo '</td>';
-				echo '<td><a href="/detail.php?id=';
-				echo $row[0];
+				echo '<td><a href="/detail.php?pelicula_id='.$row[0];
 				echo '">';
 				echo '<img width="200px" height="300px" src="';
 				echo $row['url_imagen'];
