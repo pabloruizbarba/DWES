@@ -3,8 +3,6 @@ import random
 print("Bienvenido a Piedra, Papel, Tijera")
 empate=0
 def fpiedra(empate):   
-    ganar=0
-    perder=0
     print("Piedra, papel, tijera...")
     print("1) Piedra")
     print("2) Papel")
@@ -26,27 +24,26 @@ def fpiedra(empate):
 
     if (respuesta == 1) and (maquina == 3):
         print ("Piedra gana a tijeras")
-        ganar=ganar+1
+        empate=empate+1
     elif (respuesta == 3) and (maquina == 1):
         print ("Piedra gana a tijeras")
-        perder=perder+1
+        empate=empate-1
     elif (respuesta == 2) and (maquina == 1):
         print ("Papel gana a piedra")
-        ganar = ganar+1
+        empate=empate+1
     elif (respuesta == 1) and (maquina == 2):
         print ("Papel gana a piedra") 
-        perder=perder+1 
+        empate=empate-1
     elif (respuesta == 3) and (maquina == 2):
         print ("Tijera gana a papel")
-        ganar = ganar+1
+        empate=empate+1
     elif (respuesta == 2) and (maquina == 3):
         print ("Tijera gana a papel") 
-        perder=perder+1 
+        empate=empate-1 
     else:
         print("Empate!")
     print("")
     print("")
-    empate=ganar-perder
     return empate
 
 for i in range(0,5):
