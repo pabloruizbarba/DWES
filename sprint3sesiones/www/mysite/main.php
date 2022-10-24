@@ -10,6 +10,15 @@
 			th{
 				background-color: lime;
 			}
+			
+			img:hover {
+					transition: 1s all ease-in-out;
+					transform: scale(1.1);
+				}
+			#yellow:hover{
+				background-color:yellow;
+				font-size:30px;
+				}
 		</style>
 	</head>
 	<body>
@@ -26,7 +35,7 @@
 				echo '<tr><td>';
 				echo $row['id'];
 				echo '</td>'; 
-				echo '<td>';
+				echo '<td id="yellow">';
 				echo $row['nombre'];
 				echo '</td>';
 				echo '<td><a href="/detail.php?pelicula_id='.$row[0];
