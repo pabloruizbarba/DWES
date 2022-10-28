@@ -23,7 +23,8 @@
 	</head>
 	<body>
 		<h1>Conexión establecida</h1>
-		<a href="/logout.php">Logout</a>
+		<a href="/logout.php">Logout</a><br>
+		<a href="/cambiar.html">Cambiar contraseña</a>
 		<?php
 			// Lanzar una query
 			$query = 'SELECT * FROM tPeliculas';
