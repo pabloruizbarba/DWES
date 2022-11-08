@@ -50,6 +50,6 @@ def guardar_comentario(request, pelicula_id):
 	json_peticion = json.loads(request.body)
 	comentario = Tcomentarios()
 	comentario.comentario = json_peticion['nuevo_comentario']
-	comentario.cancion = Tpeliculas.objects.get(id = pelicula_id)
+	comentario.pelicula = Tpeliculas.objects.get(id = pelicula_id)
 	comentario.save()
 	return JsonResponse({"status": "ok"})
